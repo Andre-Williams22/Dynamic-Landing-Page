@@ -19,7 +19,7 @@ p {
   color: #26a69a;
 }
 
-.parallax-container {
+.parasllax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
@@ -69,14 +69,14 @@ textarea {
 	border: 1px solid #ccc;
 }
 
-.btn {
+.btnnn {
 	display: block;
 	width: 100%;
-	background: #333;
+	background: #26A69A;
 	color: #fff;
-	padding: 10px 20px;
-	border: none;
+  padding: 15px 15px;
+  size: 100px;
 	cursor: pointer;
-	outline: none;
+	outline: #26A69A;
 	margin-top: 1rem;
 }
