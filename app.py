@@ -28,10 +28,10 @@ db = SQLAlchemy(app)
 class Feedback(db.Model):
     __tablename__ = 'feedback'
     id = db.Column(db.Integer, primary_key=True)
-    first = db.Column(db.String(200), unique=True)
-    last = db.Column(db.String(200), unique=True)
+    first = db.Column(db.String(200))
+    last = db.Column(db.String(200))
     age = db.Column(db.Integer)
-    gender = db.Column(db.String(200), unique=True)
+    gender = db.Column(db.String(200))
     email = db.Column(db.String(200), unique=True)
     number = db.Column(db.Integer)
 
