@@ -5,6 +5,12 @@ app = Flask(__name__)
 
 ENV = 'prod'
 
+#  Access Production Database
+# heroku run python
+# from app import db
+# db.create_all()
+# exit()
+# heroku pg:psql --app acumealio
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456@localhost/acumeal_landingpage'
@@ -14,6 +20,7 @@ else:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+# Access Local Database
 # from app import db
 # db.create_all()
 # exit()
