@@ -32,7 +32,7 @@ class Feedback(db.Model):
     last = db.Column(db.String(200))
     age = db.Column(db.Integer)
     gender = db.Column(db.String(200))
-    email = db.Column(db.String(200), unique=True)
+    email = db.Column(db.String(200))
     number = db.Column(db.Integer)
 
 
@@ -60,7 +60,7 @@ def submit():
         gender = request.form['gender']
         email = request.form['email']
         number = request.form['number']
-        if first == '' or email == '':
+        if first == '' or email == '' or age == '' or last == '':
             return render_template('index.html', message='Please enter required fields')
 
         if db.session.query(Feedback).filter(Feedback.email == email).count() == 0:
